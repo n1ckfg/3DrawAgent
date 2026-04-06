@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="3DrawAgent: Teaching LLM to Draw in 3D with Early Contrastive Experience.">
+  <meta name="keywords" content="3DrawAgent, 3D sketch, LLM, CVPR 2026">
+  <title>3DrawAgent: Teaching LLM to Draw in 3D with Early Contrastive Experience</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <main class="page">
+    <header class="paper-header">
+      <h1>
+        <span>3DrawAgent: Teaching LLM to Draw in 3D</span>
+        <span>with Early Contrastive Experience</span>
+      </h1>
+
+      <p class="authors">
+        Hongcan Xiao<sup>1</sup>,
+        Xinyue Xiao<sup>1,2</sup>,
+        Yilin Wang<sup>1</sup>,
+        Yue Zhang<sup>3</sup>,
+        <a href="https://qugank.github.io/">Yonggang Qi</a><sup>1&#8224;</sup>
+      </p>
+
+      <p class="author-note">&#8224; Corresponding author</p>
+
+      <p class="affiliations">
+        <sup>1</sup>Beijing University of Posts and Telecommunications
+        <span class="sep">|</span>
+        <sup>2</sup>Jiangnan University
+        <span class="sep">|</span>
+        <sup>3</sup>HaoHan Data
+      </p>
+
+      <p class="paper-status">Accepted by CVPR 2026 &#127881; &#127881; &#127881;</p>
+
+      <div class="paper-links" aria-label="Project links">
+        <a class="paper-icon-link" href="#" title="Replace with the public arXiv URL" aria-label="arXiv">
+          <i class="ai ai-arxiv"></i>
+          <span>arXiv</span>
+        </a>
+        <a class="paper-icon-link" href="https://github.com/xh57/3DrawAgent" aria-label="Code">
+          <i class="fab fa-github"></i>
+          <span>Code</span>
+        </a>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Abstract</h2>
+      <p>
+        Sketching in 3D space enables expressive reasoning about shape, structure, and spatial relationships, yet generating
+        3D sketches through natural language remains a major challenge. In this work, we introduce 3DrawAgent, a training-free,
+        language-driven framework for 3D sketch generation that leverages large language models (LLMs) to sequentially draw
+        3D Bezier curves under geometric feedback. Unlike prior 2D sketch agents, our method introduces a relative experience
+        optimization strategy that adapts the recently proposed Group Reward Policy Optimization (GRPO) paradigm. Instead of
+        relying on explicit ground-truth supervision, we construct pairwise comparisons among generated sketches, with each
+        pair consisting of a relatively better and a worse result based on CLIP-based perceptual rewards and LLM-based
+        fine-grained qualitative assessment. These experiences are then used to iteratively refine the prior knowledge of 3D
+        drawing, enabling black-box reinforcement of the model's 3D awareness. This design allows our model to self-improve
+        its spatial understanding and drawing quality without parameter updates. Experiments show that 3DrawAgent can generate
+        complex and coherent 3D Bezier sketches from diverse textual prompts, exhibit emergent geometric reasoning, and
+        generalize to novel shapes.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Method</h2>
+      <figure class="figure-block">
+        <img src="./static/images/Framework.png" alt="Method overview of 3DrawAgent.">
+      </figure>
+    </section>
+
+    <section class="section">
+      <h2>Results</h2>
+      <figure class="figure-block">
+        <img src="./static/images/Quantitative_Results.png" alt="Quantitative results of 3DrawAgent.">
+      </figure>
+    </section>
+
+    <section class="section">
+      <figure class="figure-block">
+        <img src="./static/images/more_results1.svg" alt="Additional qualitative results of 3DrawAgent part one.">
+      </figure>
+    </section>
+
+    <section class="section">
+      <figure class="figure-block">
+        <img src="./static/images/more_results2.svg" alt="Additional qualitative results of 3DrawAgent part two.">
+      </figure>
+    </section>
+
+    <section class="section">
+      <h2>BibTeX</h2>
+      <pre class="bibtex"><code>@inproceedings{xiao2026drawagent,
+  title      = {3DrawAgent: Teaching LLM to Draw in 3D with Early Contrastive Experience},
+  shorttitle = {3DrawAgent},
+  author     = {Xiao, Hongcan and Xiao, Xinyue and Wang, Yilin and Zhang, Yue and Qi, Yonggang},
+  booktitle  = {Proceedings of the {IEEE}/{CVF} Conference on Computer Vision and Pattern Recognition ({CVPR})},
+  year       = {2026}
+}</code></pre>
+    </section>
+  </main>
+</body>
+</html>
