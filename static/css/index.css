@@ -139,6 +139,23 @@ sup {
   text-align: justify;
 }
 
+.highlight-list {
+  margin: 14px 0 20px;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.highlight-list li {
+  padding: 10px 14px;
+  border-left: 3px solid #f5a623;
+  background: #fffaf2;
+  border-radius: 0 6px 6px 0;
+  line-height: 1.6;
+}
+
 .figure-block {
   margin: 0;
 }

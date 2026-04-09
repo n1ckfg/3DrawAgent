@@ -72,6 +72,36 @@
 
     <section class="section">
       <h2>Method</h2>
+      <p>
+        3DrawAgent is a <strong>training-free</strong>, language-driven framework for 3D sketch generation built around three stages:
+        (i) language-conditioned 3D curve generation via in-context prompting,
+        (ii) contrastive experience learning through a GRPO-inspired accumulation process, and
+        (iii) experience-guided 3D sketch generation for novel prompts.
+      </p>
+      <ul class="highlight-list">
+        <li>
+          <strong>LLM as Spatial Planner.</strong>
+          A frozen LLM (DeepSeek-V3 / Gemini-2.5 Pro) autoregressively generates sequences of 3D B&eacute;zier
+          control points from text prompts via carefully designed in-context examples &mdash; no fine-tuning required.
+        </li>
+        <li>
+          <strong>Contrastive Knowledge Extraction (CKE).</strong>
+          Inspired by GRPO, we construct pairwise contrastive experiences from candidate sketches ranked by
+          multi-view CLIP similarity. The LLM then acts as a semantic advantage judge, articulating
+          <em>why</em> one sketch outperforms another to distill transferable 3D spatial principles.
+        </li>
+        <li>
+          <strong>Supervision-free &amp; Ground-truth-free.</strong>
+          The entire pipeline relies solely on self-produced rollouts and CLIP-based perceptual rewards,
+          requiring no 3D annotations, no gradient updates, and no predefined motion priors.
+        </li>
+        <li>
+          <strong>Competitive Performance at Minimal Cost.</strong>
+          Despite being training-free, 3DrawAgent matches or surpasses trained baselines on CLIP-S and
+          aesthetic scores, while reducing generation time from 60&ndash;120 min (GPU) to &sim;2 min at
+          an average cost of $0.09 per sample.
+        </li>
+      </ul>
       <figure class="figure-block">
         <img src="./static/images/Framework.png" alt="Method overview of 3DrawAgent.">
       </figure>
