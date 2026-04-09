@@ -55,18 +55,7 @@
     <section class="section">
       <h2>Abstract</h2>
       <p>
-        Sketching in 3D space enables expressive reasoning about shape, structure, and spatial relationships, yet generating
-        3D sketches through natural language remains a major challenge. In this work, we introduce 3DrawAgent, a training-free,
-        language-driven framework for 3D sketch generation that leverages large language models (LLMs) to sequentially draw
-        3D Bezier curves under geometric feedback. Unlike prior 2D sketch agents, our method introduces a relative experience
-        optimization strategy that adapts the recently proposed Group Reward Policy Optimization (GRPO) paradigm. Instead of
-        relying on explicit ground-truth supervision, we construct pairwise comparisons among generated sketches, with each
-        pair consisting of a relatively better and a worse result based on CLIP-based perceptual rewards and LLM-based
-        fine-grained qualitative assessment. These experiences are then used to iteratively refine the prior knowledge of 3D
-        drawing, enabling black-box reinforcement of the model's 3D awareness. This design allows our model to self-improve
-        its spatial understanding and drawing quality without parameter updates. Experiments show that 3DrawAgent can generate
-        complex and coherent 3D Bezier sketches from diverse textual prompts, exhibit emergent geometric reasoning, and
-        generalize to novel shapes.
+        Sketching in 3D space enables expressive reasoning about shape, structure, and spatial relationships, yet generating 3D sketches through natural language remains a major challenge. In this work, we introduce 3DrawAgent, a training-free, language-driven framework for 3D sketch generation that leverages large language models (LLMs) to sequentially draw 3D Bezier curves under geometric feedback. Unlike prior 2D sketch agents, our method introduces a relative experience optimization strategy that adapts the recently proposed Group Reward Policy Optimization (GRPO) paradigm. Instead of relying on explicit ground-truth supervision, we construct pairwise comparisons among generated sketches, with each pair consisting of a relatively better and a worse result based on CLIP-based perceptual rewards and LLM-based fine-grained qualitative assessment. These experiences are then used to iteratively refine the prior knowledge of 3D drawing, enabling black-box reinforcement of the model's 3D awareness. This design allows our model to self-improve its spatial understanding and drawing quality without parameter updates. Experiments show that 3DrawAgent can generate complex and coherent 3D Bezier sketches from diverse textual prompts, exhibit emergent geometric reasoning, and generalize to novel shapes, establishing a new paradigm for advancing the field of training-free 3D sketch intelligence.
       </p>
     </section>
 
