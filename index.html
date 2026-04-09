@@ -78,7 +78,11 @@
         (ii) contrastive experience learning through a GRPO-inspired accumulation process, and
         (iii) experience-guided 3D sketch generation for novel prompts.
       </p>
+      <figure class="figure-block">
+        <img src="./static/images/Framework.png" alt="Method overview of 3DrawAgent.">
+      </figure>
       <ul class="highlight-list">
+        Key Features of 3DrawAgent:
         <li>
           <strong>LLM as Spatial Planner.</strong>
           A frozen LLM (DeepSeek-V3 / Gemini-2.5 Pro) autoregressively generates sequences of 3D B&eacute;zier
@@ -102,26 +106,56 @@
           an average cost of $0.09 per sample.
         </li>
       </ul>
-      <figure class="figure-block">
-        <img src="./static/images/Framework.png" alt="Method overview of 3DrawAgent.">
-      </figure>
     </section>
 
     <section class="section">
       <h2>Results</h2>
+
+      <h3 class="subsection-title">Quantitative Comparison</h3>
       <figure class="figure-block">
         <img src="./static/images/Quantitative_Results.png" alt="Quantitative results of 3DrawAgent.">
       </figure>
-    </section>
+      <p class="result-keypoint">
+        <strong>Quantitative Results.</strong>
+        We compare our training-free 3DrawAgent (based on DeepSeek-V3.2 and Gemini-2.5 Pro) against existing methods
+        that require substantial model training. Our approach delivers highly competitive performance across all metrics:
+        3DrawAgent achieves semantic alignment scores comparable to trained baselines for both category-level and
+        fine-grained text descriptions, and consistently produces strong Aesthetic Scores, demonstrating the visual
+        appeal and structural quality of the generated 3D sketches.
+        Importantly, <strong>all results are obtained without any model fine-tuning</strong>, underscoring the
+        effectiveness of our contrastive knowledge extraction pipeline in equipping frozen LLMs with robust
+        3D reasoning capabilities.
+      </p>
 
-    <section class="section">
+      <hr class="section-divider">
+
+      <h3 class="subsection-title">Qualitative Comparison</h3>
+      <figure class="figure-block">
+        <img src="./static/images/comparisons.svg" alt="Qualitative comparison results.">
+      </figure>
+
+      <hr class="section-divider">
+
+      <h3 class="subsection-title">Controllable Abstraction Level</h3>
+      <figure class="figure-block">
+        <img src="./static/images/abs_levels.svg" alt="Results with different abstraction levels.">
+      </figure>
+      <p class="result-keypoint">
+        <strong>Controllable Abstraction Level.</strong>
+        A key advantage of our language-driven framework is its <strong>explicit controllability over abstraction
+        level via natural-language constraints</strong>. By simply specifying the desired stroke count (e.g.,
+        &ldquo;draw a bench using exactly 16 curves&rdquo;), the LLM allocates its geometric budget toward
+        semantically important structures &mdash; from skeletal outlines at 8 curves to dense wireframes at
+        128 curves &mdash; without any retraining or architectural changes.
+      </p>
+
+      <hr class="section-divider">
+
+      <h3 class="subsection-title">More Results</h3>
       <figure class="figure-block">
         <img src="./static/images/more_results1.svg" alt="Additional qualitative results of 3DrawAgent part one.">
       </figure>
-    </section>
-
-    <section class="section">
-      <figure class="figure-block">
+      <figure class="figure-block figure-block--gap">
         <img src="./static/images/more_results2.svg" alt="Additional qualitative results of 3DrawAgent part two.">
       </figure>
     </section>

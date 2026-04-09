@@ -156,8 +156,34 @@ sup {
   line-height: 1.6;
 }
 
+.result-keypoint {
+  margin: 14px 0 0;
+  padding: 12px 16px;
+  background: #f7f9ff;
+  border-left: 3px solid #1a5fb4;
+  border-radius: 0 6px 6px 0;
+  text-align: justify;
+}
+
+.subsection-title {
+  margin: 20px 0 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #444444;
+}
+
+.section-divider {
+  margin: 24px 0;
+  border: none;
+  border-top: 1px dashed #dddddd;
+}
+
 .figure-block {
   margin: 0;
+}
+
+.figure-block--gap {
+  margin-top: 16px;
 }
 
 .figure-block img {
