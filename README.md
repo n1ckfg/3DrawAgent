@@ -1,10 +1,14 @@
 # 3DrawAgent
 
+[![CVPR 2026](https://img.shields.io/badge/CVPR-2026-blue.svg)](https://cvpr.thecvf.com/Conferences/2026)
+[![Highlight](https://img.shields.io/badge/%E2%AD%90-Highlight-f5a623.svg)](#)
 [![Home Page](https://img.shields.io/badge/%20%20Project-3DrawAgent-blue.svg)](./index.html)
 [![arXiv](https://img.shields.io/badge/Arxiv-TODO-b31b1b.svg?logo=arXiv)](#)
 [![Code](https://img.shields.io/badge/Code-GitHub-181717.svg?logo=GitHub)](https://github.com/xh57/3DrawAgent)
 
 Official implementation of **3DrawAgent: Teaching LLM to Draw in 3D with Early Contrastive Experience**.
+
+> **⭐ CVPR 2026 Highlight Paper**
 
 ## Introduction
 
